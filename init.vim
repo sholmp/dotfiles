@@ -24,7 +24,8 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'scrooloose/NERDTree'
-Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdcommenter'
+" Plug 'tpope/vim-commentary'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -40,3 +41,8 @@ set softtabstop=4
 " When using rip grep (:Rg), don't grep on file names:
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 map <C-f> :Files<CR>
+
+" nmap <C-l> :exec &nu==&rnu? "se nu!" : "se rnu!"
+
+"map <Leader>ct <plug>NERDCommenterToggle
+map <C-q> <plug>NERDCommenterToggle
