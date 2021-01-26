@@ -9,7 +9,6 @@ nnoremap <Leader>O O<ESC>
 imap jj <ESC>
 
 
-" hi MatchParen ctermbg=black guibg=black
 source ~/.config/nvim/coc-settings.vim
 
 call plug#begin('~/.config/nvim/plugged')
@@ -29,9 +28,19 @@ Plug 'preservim/nerdcommenter'
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'honza/vim-snippets'
 Plug 'derekwyatt/vim-fswitch'
+Plug 'justinmk/vim-sneak'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'wellle/targets.vim'
+Plug 'markonm/traces.vim'
 " List ends here. Plugins become visible to Vim after this call.
+
 call plug#end()
 
+source $HOME/.config/nvim/plug-config/sneak_cfg.vim
+source $HOME/.config/nvim/plug-config/airline_cfg.vim
+source $HOME/.config/nvim/plug-config/fzf_cfg.vim
+source $HOME/.config/nvim/plug-config/fswitch_cfg.vim
 colorscheme gruvbox
 
 " use spaces for tabs  
@@ -41,7 +50,6 @@ set softtabstop=4
 
 " stop automatic comments on next line
 set formatoptions-=cro
-
 
 " fzf settings
 " When using rip grep (:Rg), don't grep on file names:
@@ -54,15 +62,14 @@ map <C-q> <plug>NERDCommenterToggle
         
 nmap <Leader>sw :FSHere<CR>
 "nmap <Leader>sw :CocCommand clangd.switchSourceHeader<CR>
-autocmd BufLeave :w  
 
- augroup mycppfiles
-   au!
-   au BufEnter *.h let b:fswitchdst  = 'cpp'
-   au BufEnter *.h let b:fswitchlocs = 'rel:../src'
-   au BufEnter *.cpp let b:fswitchdst = 'h'
-   au BufEnter *.cpp let b:fswitchlocs = "rel:../inc"
- augroup END
+ "augroup mycppfiles
+   "au!
+   "au BufEnter *.h let b:fswitchdst  = 'cpp'
+   "au BufEnter *.h let b:fswitchlocs = 'rel:../src'
+   "au BufEnter *.cpp let b:fswitchdst = 'h'
+   "au BufEnter *.cpp let b:fswitchlocs = "rel:../inc"
+ "augroup END
 
 
 " Navigation of splits
@@ -73,3 +80,34 @@ map <A-l> <C-w><C-l>
 
 set splitright
 set splitbelow 
+
+" Go to last active tab
+au TabLeave * let g:lasttab = tabpagenr()
+nnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
+vnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
+
+" Copy and paste to/from clipboard
+set clipboard^=unnamed,unnamedplus
+map <leader>y "+y
+map <leader>p "*p
+
+" Use verymagic regex as default when searching:
+nnoremap / /\v
+"cnoremap %s /%s/\v
+map <leader>rg :Rg<cr>
+
+" turn off search highlighting 
+nnoremap <Esc> :nohlsearch<Esc>
+" stop automatic comment of next line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+nmap <cr> :wa<cr>
+
+"https://vim.fandom.com/wiki/Auto_save_files_when_focus_is_lost
+autocmd FocusLost * silent! wa
+
+" faster buffer switching
+"nnoremap <Leader>b :ls<CR>:b<Space>
+
+" Stop lines from wrapping to next line when too long
+set nowrap
