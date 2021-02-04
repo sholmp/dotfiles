@@ -111,3 +111,23 @@ autocmd FocusLost * silent! wa
 
 " Stop lines from wrapping to next line when too long
 set nowrap
+
+
+" Use fzf search for previous commands
+cnoremap <C-f> :History:<cr>
+
+" Enable syntax folding
+set foldmethod=syntax
+set foldlevel=99
+set nofoldenable
+set foldnestmax=1
+
+augroup remember_folds
+    autocmd!
+    autocmd BufWinLeave * mkview
+    autocmd BufWinEnter * silent! loadview
+augroup end
+
+
+" enter command mode easier
+noremap ø :
