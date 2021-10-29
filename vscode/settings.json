@@ -1,0 +1,57 @@
+{
+    "editor.multiCursorModifier": "alt",
+    "[cpp]": {
+    "editor.wordBasedSuggestions": false,
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true,
+    },
+    "C_Cpp.updateChannel": "Insiders",
+    "cmake.configureOnOpen": true,
+    "editor.renderIndentGuides": false,
+    "vim.useSystemClipboard": true,
+"window.menuBarVisibility": "default",
+
+    "explorer.confirmDelete": false,
+
+
+
+"files.autoSave": "onFocusChange",
+"C_Cpp.default.cppStandard": "c++17",
+"[typescript]": {
+    "editor.tabSize": 8,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+},
+"[html]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+},
+"workbench.editorAssociations": {
+  "*.ipynb": "jupyter-notebook"
+},
+"json.maxItemsComputed": 100000,
+"python.showStartPage": false,
+"vim.disableExtension": true,
+"editor.cursorStyle": "line",
+"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+"editor.wordWrap": "off",
+
+
+// vim settings
+"vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "update.mode": "none",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "vim.smartRelativeLine": true,
+  "editor.lineNumbers": "on",
+  "window.zoomLevel": -2,
+}
