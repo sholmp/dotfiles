@@ -18,5 +18,6 @@ set norelativenumber
 au InsertEnter * set norelativenumber 
 au InsertLeave * set relativenumber
 
-au FocusLost * :w "Save currently focused file
+au FocusLost *.c,*.cpp,*.py,*.html :w "Save currently focused file
+
 
