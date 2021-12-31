@@ -172,6 +172,11 @@
     {
         "key": "ctrl+[Semicolon]",
         "command": "workbench.action.closePanel"
-    }
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
 ]
 
