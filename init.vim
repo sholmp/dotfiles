@@ -20,4 +20,5 @@ au InsertLeave * set relativenumber
 
 au FocusLost *.c,*.cpp,*.py,*.html :w "Save currently focused file
 
+set formatoptions-=cro "Disable comments continuation
 
