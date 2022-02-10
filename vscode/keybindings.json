@@ -9,11 +9,6 @@
         "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"
     },
     {
-        "key": "ctrl+r",
-        "command": "workbench.action.debug.run",
-        "when": "debuggersAvailable"
-    },
-    {
         "key": "ctrl+f5",
         "command": "-workbench.action.debug.run",
         "when": "debuggersAvailable"
@@ -172,6 +167,34 @@
     {
         "key": "ctrl+[Semicolon]",
         "command": "workbench.action.closePanel"
-    }
+    },
+    {
+        "key": "alt+o",
+        "command": "-clangd.switchheadersource",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "f12",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.tasks.runTask"
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "copyFilePath",
+        // "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+      }
 ]
 

@@ -1,50 +1,37 @@
 {
-    "editor.multiCursorModifier": "alt",
-    "[cpp]": {
+  "editor.multiCursorModifier": "alt",
+  "[cpp]": {
     "editor.wordBasedSuggestions": false,
     "editor.suggest.insertMode": "replace",
-    "editor.semanticHighlighting.enabled": true,
-    },
-    "C_Cpp.updateChannel": "Insiders",
-    "cmake.configureOnOpen": true,
-    "editor.renderIndentGuides": false,
-    "vim.useSystemClipboard": true,
-"window.menuBarVisibility": "default",
+    "editor.semanticHighlighting.enabled": true
+  },
+  "C_Cpp.updateChannel": "Insiders",
+  "cmake.configureOnOpen": true,
+  "editor.renderIndentGuides": false,
+  "vim.useSystemClipboard": true,
 
-    "explorer.confirmDelete": false,
+  "explorer.confirmDelete": false,
 
-
-
-"files.autoSave": "onFocusChange",
-"C_Cpp.default.cppStandard": "c++17",
-"[typescript]": {
+  "files.autoSave": "onFocusChange",
+  "C_Cpp.default.cppStandard": "c++17",
+  "[typescript]": {
     "editor.tabSize": 8,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
-},
-"[html]": {
+  },
+  "[html]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
-},
-"workbench.editorAssociations": {
-  "*.ipynb": "jupyter-notebook"
-},
-"json.maxItemsComputed": 100000,
-"python.showStartPage": false,
-"vim.disableExtension": true,
-"editor.cursorStyle": "line",
-"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-"editor.wordWrap": "off",
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "json.maxItemsComputed": 100000,
+  "editor.cursorStyle": "line",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "on",
 
-
-// vim settings
-"vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
-  ],
   "security.workspace.trust.untrustedFiles": "open",
   "update.mode": "none",
   "notebook.cellToolbarLocation": {
@@ -52,6 +39,59 @@
     "jupyter-notebook": "left"
   },
   "vim.smartRelativeLine": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.guides.bracketPairs": true,
+  // Have both clangd and vscode's "c/c++" extension enabled. c/c++ extension is good for debugging
+  // https://stackoverflow.com/questions/51885784/how-to-setup-vs-code-for-c-with-clangd-support
+  // "C_Cpp.autocomplete": "Disabled",  // So you don't get autocomplete from both extensions.
+  // "C_Cpp.errorSquiggles": "Disabled", // So you don't get error squiggles from both extensions (clangd's seem to be more reliable anyway).
+  // "C_Cpp.intelliSenseEngine": "Disabled",
+
+  "workbench.colorCustomizations": {
+    // "gitDecoration.modifiedResourceForeground": "#0000FF"
+  },
+  "explorer.confirmDragAndDrop": false,
+
+  "files.associations": {
+    "Config.*": "makefile"
+  },
+  "C_Cpp.intelliSenseEngine": "Default",
+
+  // vim settings
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.cursorStylePerMode.insert": "line-thin",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.useCtrlKeys": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+      {
+          "before": ["u"],
+          "commands": ["undo"]
+      },
+      {
+          "before": ["<C-r>"],
+          "commands": ["redo"]
+      }
+  ],
+  "diffEditor.renderSideBySide": false,
+  "window.zoomLevel": -1,
   "editor.lineNumbers": "on",
-  "window.zoomLevel": -2,
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+
+  //neovim extension settings
+  
+  // Theme
+
+  // "workbench.colorCustomizations": {
+  //   "[Visual Studio Dark]": {
+  //       "tab.activeBackground": "#754477", // highlight 
+  //       "tab.active"
+  //   }
+  // }
 }
