@@ -195,6 +195,11 @@
     {
         "key": "ctrl+b",
         "command": "workbench.action.toggleSidebarVisibility"
-      }
+      },
+    {
+        "key": "shift+alt+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
 ]
 
