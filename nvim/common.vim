@@ -1,4 +1,4 @@
-" Configuration that should be common between native nvim and vscode nvim sessions
+ Configuration that should be common between native nvim and vscode nvim sessions
 
 "Compensate for nordic keyboard layout
 nmap æ :
