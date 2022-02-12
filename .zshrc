@@ -74,8 +74,9 @@ export FZF_BASE=~/repos/fzf
 plugins=(
 	git
 	zsh-syntax-highlighting
-        zsh-autosuggestions
+#        zsh-autosuggestions
         fzf
+		z.lua
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -117,5 +118,12 @@ if [[ $TILIX_ID ]]; then
 fi
 
 #export QT_DEBUG_PLUGINS=1
-export PATH=$PATH:/home/sholmp/Qt/Tools/QtCreator/bin
+export PATH=$PATH:/home/sholmp/Qt6/Tools/QtCreator/bin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export EDITOR=nvim
+
+
+source /opt/ros/noetic/setup.zsh
+
+source /home/sholmp/ros_ws/devel/setup.zsh
