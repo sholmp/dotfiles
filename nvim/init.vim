@@ -25,5 +25,5 @@ call plug#end()
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
 
-nmap <Leader>s <Plug>(easymotion-s)
-nmap <Leader>q <Plug>(easymotion-s2)
+nmap s <Plug>(easymotion-s)
+nmap <Leader>s <Plug>(easymotion-s2)
