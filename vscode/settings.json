@@ -55,9 +55,8 @@
   "explorer.confirmDragAndDrop": false,
 
   "files.associations": {
-    "Config.*": "makefile"
+    "Rules.*" : "makefile"
   },
-  "C_Cpp.intelliSenseEngine": "Default",
 
   // vim settings
   "vim.insertModeKeyBindings": [
@@ -80,9 +79,12 @@
       }
   ],
   "diffEditor.renderSideBySide": false,
-  "window.zoomLevel": -1,
   "editor.lineNumbers": "on",
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.logOutputToConsole": true,
+  "vscode-neovim.useCtrlKeysForInsertMode": false,
+  "editor.minimap.enabled": false,
+  "window.zoomLevel": -1,
 
   //neovim extension settings
   
